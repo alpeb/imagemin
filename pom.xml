@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>imagemin</artifactId>
-    <version>0.4.7-SNAPSHOT</version>
+    <version>3.1.0-SNAPSHOT</version>
     <name>imagemin</name>
     <description>WebJar for imagemin</description>
     <url>http://webjars.org</url>
@@ -41,8 +41,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>0.4.6</upstreamVersion>
-        <upstream.url>https://github.com/kevva/imagemin</upstream.url>
+        <upstreamVersion>3.1.0</upstreamVersion>
+        <upstream.url>https://github.com/imagemin/imagemin/archive</upstream.url>
         <extractDir>${project.build.directory}/imagemin-${upstreamVersion}</extractDir>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     </properties>
@@ -119,8 +119,8 @@
                             <goal>download-single</goal>
                         </goals>
                         <configuration>
-                            <url>${upstream.url}/archive</url>
-                            <fromFile>${upstreamVersion}.zip</fromFile>
+                            <url>${upstream.url}</url>
+                            <fromFile>v${upstreamVersion}.zip</fromFile>
                             <toDir>${project.build.directory}</toDir>
                         </configuration>
                     </execution>
@@ -139,7 +139,7 @@
                         <configuration>
                             <target>
                                 <echo message="unzip archive" />
-                                <unzip src="${project.build.directory}/${upstreamVersion}.zip" dest="${project.build.directory}" />
+                                <unzip src="${project.build.directory}/v${upstreamVersion}.zip" dest="${project.build.directory}" />
 
                                 <echo message="moving resources" />
                                 <move file="${extractDir}/package.json" toDir="${destDir}" />
