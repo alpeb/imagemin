@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>imagemin</artifactId>
-    <version>3.1.0-SNAPSHOT</version>
+    <version>3.1.0</version>
     <name>imagemin</name>
     <description>WebJar for imagemin</description>
     <url>http://webjars.org</url>
@@ -28,7 +28,7 @@
         <url>https://github.com/webjars/imagemin</url>
         <connection>scm:git:https://github.com/webjars/imagemin.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/imagemin.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>imagemin-3.1.0</tag>
     </scm>
 
     <developers>
